@@ -7,7 +7,7 @@ type Payload = {
   company?: string;
   subject: string;
   message: string;
-  website?: string; // honeypot
+  website?: string;
 };
 
 function isValidEmail(email: string) {
@@ -17,7 +17,6 @@ function isValidEmail(email: string) {
 export async function POST(req: Request) {
   const body = (await req.json()) as Partial<Payload>;
 
-  // Honeypot: if filled, it's almost certainly a bot
   if (body.website) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
@@ -36,51 +35,50 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
   }
 
-  const SMTP_HOST = process.env.SMTP_HOST;
-  const SMTP_PORT = process.env.SMTP_PORT;
-  const SMTP_USER = process.env.SMTP_USER;
-  const SMTP_PASS = process.env.SMTP_PASS;
+  const smtpHost = process.env.SMTP_HOST;
+  const smtpPort = process.env.SMTP_PORT;
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  const toEmail = process.env.CONTACT_TO_EMAIL;
+  const fromEmail = process.env.CONTACT_FROM_EMAIL;
 
-  const TO_EMAIL = process.env.CONTACT_TO_EMAIL;     // your inbox
-  const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL; // verified sender for SMTP
-
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !TO_EMAIL || !FROM_EMAIL) {
+  if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !toEmail || !fromEmail) {
     return NextResponse.json(
-      { error: "Server email is not configured (missing env vars)." },
+      { error: "Server email is not configured. Add the SMTP variables in .env.local." },
       { status: 500 }
     );
   }
 
   const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: Number(SMTP_PORT),
-    secure: Number(SMTP_PORT) === 465, // true for 465, false for 587
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
+    host: smtpHost,
+    port: Number(smtpPort),
+    secure: Number(smtpPort) === 465,
+    auth: { user: smtpUser, pass: smtpPass },
   });
 
   const text = [
-    `New contact form submission`,
-    ``,
+    "New contact form submission",
+    "",
     `Name: ${name}`,
     `Email: ${email}`,
-    `Company: ${company || "—"}`,
+    `Company: ${company || "-"}`,
     `Subject: ${subject}`,
-    ``,
-    `Message:`,
+    "",
+    "Message:",
     message,
   ].join("\n");
 
   try {
     await transporter.sendMail({
-      from: FROM_EMAIL,
-      to: TO_EMAIL,
+      from: fromEmail,
+      to: toEmail,
       replyTo: email,
       subject: `Website Contact: ${subject}`,
       text,
     });
 
     return NextResponse.json({ ok: true }, { status: 200 });
-  } catch (err) {
+  } catch {
     return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
   }
 }
