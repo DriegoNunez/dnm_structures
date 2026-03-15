@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 type Payload = {
   name: string;
@@ -35,26 +35,18 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
   }
 
-  const smtpHost = process.env.SMTP_HOST;
-  const smtpPort = process.env.SMTP_PORT;
-  const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASS;
+  const resendApiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.CONTACT_TO_EMAIL;
   const fromEmail = process.env.CONTACT_FROM_EMAIL;
 
-  if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !toEmail || !fromEmail) {
+  if (!resendApiKey || !toEmail || !fromEmail) {
     return NextResponse.json(
-      { error: "Server email is not configured. Add the SMTP variables in .env.local." },
+      { error: "Server email is not configured. Add RESEND_API_KEY and contact emails." },
       { status: 500 }
     );
   }
 
-  const transporter = nodemailer.createTransport({
-    host: smtpHost,
-    port: Number(smtpPort),
-    secure: Number(smtpPort) === 465,
-    auth: { user: smtpUser, pass: smtpPass },
-  });
+  const resend = new Resend(resendApiKey);
 
   const text = [
     "New contact form submission",
@@ -69,7 +61,7 @@ export async function POST(req: Request) {
   ].join("\n");
 
   try {
-    await transporter.sendMail({
+    await resend.emails.send({
       from: fromEmail,
       to: toEmail,
       replyTo: email,
