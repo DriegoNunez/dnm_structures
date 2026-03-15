@@ -61,13 +61,13 @@ export default function ContactPage() {
             {/* Replace placeholders with your real info */}
             <p>
               <span className="font-semibold text-neutral-900">Email:</span>{" "}
-              <a className="underline hover:text-neutral-950" href="mailto:your.email@domain.com">
-                your.email@domain.com
+              <a className="underline hover:text-neutral-950" href="mailto:dmendoza@innovanv.com">
+                dmendoza@innovanv.com
               </a>
             </p>
             <p>
               <span className="font-semibold text-neutral-900">Phone:</span>{" "}
-              <span className="text-neutral-700">+1 (###) ###-####</span>
+              <span className="text-neutral-700">+1 (858) 319-6972</span>
             </p>
             <p>
               <span className="font-semibold text-neutral-900">Company:</span>{" "}
@@ -88,22 +88,22 @@ export default function ContactPage() {
               <span className="font-semibold text-neutral-900">LinkedIn:</span>{" "}
               <a
                 className="underline hover:text-neutral-950"
-                href="https://www.linkedin.com/in/YOUR-HANDLE"
+                href="https://www.linkedin.com/in/dnunezmendoza/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                /in/YOUR-HANDLE
+                /in/dnunezmendoza/
               </a>
             </p>
             <p>
               <span className="font-semibold text-neutral-900">GitHub:</span>{" "}
               <a
                 className="underline hover:text-neutral-950"
-                href="https://github.com/Driego"
+                href="https://github.com/DriegoNunez"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                github.com/Driego
+                github.com/DriegoNunez
               </a>
             </p>
           </div>
