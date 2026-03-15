@@ -38,7 +38,7 @@ export default function ContactPage() {
 
       setStatus("sent");
       form.reset();
-    } catch (err) {
+    } catch {
       setStatus("error");
       setErrorMsg("Network error. Try again.");
     }
