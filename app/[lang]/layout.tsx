@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { isLocale, locales, localizePath, type Locale } from "@/lib/i18n";
 import { getSiteCopy } from "@/lib/site-copy";
+import { LanguageToggle } from "./language-toggle";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -38,24 +39,6 @@ export async function generateMetadata({
   };
 }
 
-function LanguageToggle({ locale }: { locale: Locale }) {
-  return (
-    <div className="flex items-center gap-2 rounded-full bg-white/70 px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600">
-      {locales.map((item) => (
-        <Link
-          key={item}
-          href={localizePath(item)}
-          className={`rounded-full px-3 py-1.5 transition ${
-            item === locale ? "bg-slate-950 text-white" : "hover:bg-white hover:text-slate-950"
-          }`}
-        >
-          {item}
-        </Link>
-      ))}
-    </div>
-  );
-}
-
 export default async function LocaleLayout({
   children,
   params,
@@ -81,9 +64,9 @@ export default async function LocaleLayout({
   return (
     <>
       <header className="w-full">
-        <div className="mx-auto max-w-6xl px-6 pt-8">
+        <div className="mx-auto max-w-[92rem] px-6 pt-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <nav className="glass-nav flex flex-wrap items-center justify-center gap-3 rounded-full px-4 py-3 text-[11px] tracking-[0.25em] uppercase text-neutral-700 sm:gap-8 sm:px-8">
+            <nav className="glass-nav animate-card flex flex-wrap items-center justify-center gap-3 rounded-full px-4 py-3 text-[11px] tracking-[0.25em] uppercase text-neutral-700 sm:gap-8 sm:px-8">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
@@ -94,7 +77,9 @@ export default async function LocaleLayout({
                 </Link>
               ))}
             </nav>
-            <LanguageToggle locale={lang} />
+            <div className="animate-card" style={{ animationDelay: "100ms" }}>
+              <LanguageToggle locale={lang} />
+            </div>
           </div>
         </div>
       </header>
@@ -102,7 +87,10 @@ export default async function LocaleLayout({
       <main>{children}</main>
 
       <footer className="mt-24 border-t border-slate-200/70">
-        <div className="mx-auto max-w-6xl px-6 py-10 text-xs text-neutral-600">
+        <div
+          className="animate-card mx-auto max-w-[92rem] px-6 py-10 text-xs text-neutral-600"
+          style={{ animationDelay: "180ms" }}
+        >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="font-semibold text-neutral-900">{copy.footer.name}</div>

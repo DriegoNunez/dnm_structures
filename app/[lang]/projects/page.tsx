@@ -17,16 +17,19 @@ export default async function LocaleProjectsPage({
   const copy = getSiteCopy(lang);
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-20">
-      <section className="grid gap-8 rounded-[2rem] border border-white/60 bg-white/80 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur md:grid-cols-[1.2fr_0.8fr]">
-        <div className="space-y-5">
+    <div className="mx-auto max-w-[92rem] px-6 py-20">
+      <section className="grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
+        <div className="project-card animate-card space-y-5">
           <p className="section-kicker">{copy.projects.kicker}</p>
           <h1 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
             {copy.projects.title}
           </h1>
           <p className="max-w-2xl text-base leading-7 text-slate-600">{copy.projects.intro}</p>
         </div>
-        <div className="rounded-[1.5rem] bg-slate-950 p-6 text-slate-50">
+        <div
+          className="animate-card rounded-[1.8rem] bg-slate-950 p-6 text-slate-50 shadow-[0_24px_70px_rgba(15,23,42,0.2)]"
+          style={{ animationDelay: "120ms" }}
+        >
           <p className="text-sm uppercase tracking-[0.28em] text-sky-200/70">
             {copy.projects.guideTitle}
           </p>

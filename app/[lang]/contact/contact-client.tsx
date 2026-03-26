@@ -48,29 +48,54 @@ export function ContactClient({ lang }: { lang: Locale }) {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-20">
-      <h1 className="mb-12 text-3xl font-semibold text-neutral-900">{copy.title}</h1>
+    <div className="mx-auto max-w-[92rem] px-6 py-20">
+      <section className="mb-12 grid gap-6 xl:grid-cols-[0.92fr_1.08fr] xl:items-end">
+        <div className="project-card animate-card">
+          <p className="section-kicker">{copy.title}</p>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+            {copy.title}
+          </h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">{copy.directNote}</p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-3">
+          {[
+            { label: copy.labels.email, value: "dmendoza@innovanv.com" },
+            { label: copy.labels.company, value: "INNOVA TECHNOLOGIES" },
+            { label: copy.labels.location, value: copy.location },
+          ].map((item, index) => (
+            <div
+              key={item.label}
+              className="info-panel animate-card"
+              style={{ animationDelay: `${index * 90 + 110}ms` }}
+            >
+              <span className="info-label">{item.label}</span>
+              <p>{item.value}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <div className="grid items-start gap-12 md:grid-cols-2">
-        <aside className="space-y-6">
-          <div>
-            <h2 className="text-lg font-semibold text-neutral-900">Diego Nunez Mendoza</h2>
-            <p className="text-neutral-700">{pageCopy.brandRole}</p>
-            <p className="mt-2 text-neutral-600">{copy.location}</p>
+        <aside className="project-card animate-card space-y-6">
+          <div className="rounded-[1.5rem] bg-slate-950 p-6 text-slate-50">
+            <h2 className="text-lg font-semibold text-white">Diego Nunez Mendoza</h2>
+            <p className="text-slate-300">{pageCopy.brandRole}</p>
+            <p className="mt-2 text-slate-400">{copy.location}</p>
           </div>
 
-          <div className="space-y-2 text-neutral-700">
-            <p>
+          <div className="grid gap-3 text-neutral-700">
+            <p className="rounded-2xl bg-slate-50 px-4 py-4">
               <span className="font-semibold text-neutral-900">{copy.labels.email}:</span>{" "}
               <a className="underline hover:text-neutral-950" href="mailto:dmendoza@innovanv.com">
                 dmendoza@innovanv.com
               </a>
             </p>
-            <p>
+            <p className="rounded-2xl bg-slate-50 px-4 py-4">
               <span className="font-semibold text-neutral-900">{copy.labels.phone}:</span>{" "}
               <span className="text-neutral-700">+1 (858) 319-6972</span>
             </p>
-            <p>
+            <p className="rounded-2xl bg-slate-50 px-4 py-4">
               <span className="font-semibold text-neutral-900">{copy.labels.company}:</span>{" "}
               <a
                 className="underline hover:text-neutral-950"
@@ -83,8 +108,8 @@ export function ContactClient({ lang }: { lang: Locale }) {
             </p>
           </div>
 
-          <div className="space-y-2 text-neutral-700">
-            <p>
+          <div className="grid gap-3 text-neutral-700">
+            <p className="rounded-2xl bg-slate-50 px-4 py-4">
               <span className="font-semibold text-neutral-900">{copy.labels.linkedIn}:</span>{" "}
               <a
                 className="underline hover:text-neutral-950"
@@ -95,7 +120,7 @@ export function ContactClient({ lang }: { lang: Locale }) {
                 /in/dnunezmendoza/
               </a>
             </p>
-            <p>
+            <p className="rounded-2xl bg-slate-50 px-4 py-4">
               <span className="font-semibold text-neutral-900">{copy.labels.github}:</span>{" "}
               <a
                 className="underline hover:text-neutral-950"
@@ -108,10 +133,12 @@ export function ContactClient({ lang }: { lang: Locale }) {
             </p>
           </div>
 
-          <div className="text-sm text-neutral-600">{copy.directNote}</div>
+          <div className="rounded-[1.4rem] border border-slate-200 bg-white/75 px-4 py-4 text-sm leading-6 text-neutral-600">
+            {copy.directNote}
+          </div>
         </aside>
 
-        <section className="rounded-xl border border-neutral-200 p-6">
+        <section className="project-card animate-card" style={{ animationDelay: "120ms" }}>
           <form onSubmit={onSubmit} className="space-y-4">
             <input
               name="website"
@@ -129,7 +156,7 @@ export function ContactClient({ lang }: { lang: Locale }) {
                 <input
                   name="name"
                   required
-                  className="w-full rounded-lg border border-neutral-300 px-3 py-2 outline-none focus:border-neutral-900"
+                  className="w-full rounded-xl border border-neutral-300 bg-white/80 px-3 py-2.5 outline-none transition focus:border-neutral-900"
                   placeholder={copy.placeholders.name}
                 />
               </div>
@@ -141,7 +168,7 @@ export function ContactClient({ lang }: { lang: Locale }) {
                   name="email"
                   type="email"
                   required
-                  className="w-full rounded-lg border border-neutral-300 px-3 py-2 outline-none focus:border-neutral-900"
+                  className="w-full rounded-xl border border-neutral-300 bg-white/80 px-3 py-2.5 outline-none transition focus:border-neutral-900"
                   placeholder={copy.placeholders.email}
                 />
               </div>
@@ -154,7 +181,7 @@ export function ContactClient({ lang }: { lang: Locale }) {
                 </label>
                 <input
                   name="company"
-                  className="w-full rounded-lg border border-neutral-300 px-3 py-2 outline-none focus:border-neutral-900"
+                  className="w-full rounded-xl border border-neutral-300 bg-white/80 px-3 py-2.5 outline-none transition focus:border-neutral-900"
                   placeholder={copy.placeholders.company}
                 />
               </div>
@@ -165,7 +192,7 @@ export function ContactClient({ lang }: { lang: Locale }) {
                 <input
                   name="subject"
                   required
-                  className="w-full rounded-lg border border-neutral-300 px-3 py-2 outline-none focus:border-neutral-900"
+                  className="w-full rounded-xl border border-neutral-300 bg-white/80 px-3 py-2.5 outline-none transition focus:border-neutral-900"
                   placeholder={copy.placeholders.subject}
                 />
               </div>
@@ -179,7 +206,7 @@ export function ContactClient({ lang }: { lang: Locale }) {
                 name="message"
                 required
                 rows={6}
-                className="w-full rounded-lg border border-neutral-300 px-3 py-2 outline-none focus:border-neutral-900"
+                className="w-full rounded-xl border border-neutral-300 bg-white/80 px-3 py-2.5 outline-none transition focus:border-neutral-900"
                 placeholder={copy.placeholders.message}
               />
             </div>
@@ -187,7 +214,7 @@ export function ContactClient({ lang }: { lang: Locale }) {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="inline-flex items-center justify-center rounded-lg border border-slate-900 px-5 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+              className="primary-button disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "sending" ? copy.buttonSending : copy.buttonIdle}
             </button>

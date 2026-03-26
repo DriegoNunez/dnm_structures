@@ -135,6 +135,13 @@ body::after {
   transform: translateY(-2px);
 }
 
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+.project-link:focus-visible {
+  outline: 3px solid rgba(14, 165, 233, 0.45);
+  outline-offset: 4px;
+}
+
 .info-panel {
   border: 1px solid var(--line);
   background: var(--surface);
@@ -174,6 +181,12 @@ body::after {
   box-shadow: 0 28px 70px rgba(15, 23, 42, 0.12);
 }
 
+.project-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.14);
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -187,6 +200,15 @@ body::after {
   text-transform: uppercase;
 }
 
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.35rem 0.72rem;
+  background: rgba(15, 118, 110, 0.12);
+  color: #0f766e;
+}
+
 .tag-chip {
   display: inline-flex;
   align-items: center;
@@ -196,6 +218,17 @@ body::after {
   padding: 0.4rem 0.7rem;
   font-size: 0.78rem;
   color: #334155;
+}
+
+.project-highlight {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(248, 250, 252, 0.72);
+  border-radius: 1.2rem;
+  padding: 1rem;
+}
+
+.project-link {
+  margin-top: auto;
 }
 
 .animate-card {
@@ -223,5 +256,22 @@ body::after {
   .project-card {
     border-radius: 1.5rem;
     padding: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .project-card {
+    transition: none;
+  }
+
+  .animate-card {
+    opacity: 1;
+    animation: none;
   }
 }

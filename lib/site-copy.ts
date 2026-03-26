@@ -12,31 +12,33 @@ export const siteCopy = {
     },
     footer: {
       name: "Diego Nunez Mendoza",
-      role: "Structural and BIM Engineer • Automation",
+      role: "Structural and BIM Engineer / Automation",
       builtWith: "Built with Next.js",
     },
     home: {
-      kicker: "Structural engineer • BIM • automation",
-      title: "Diego Nunez builds structures and the systems behind them.",
+      kicker: "Structural engineer / BIM / automation",
+      title: "Diego Nunez designs structures and the systems that make delivery better.",
       summary:
-        "Based in the United States and currently working at INNOVA TECHNOLOGIES, with a focus on infrastructure, BIM delivery, and practical engineering automation.",
+        "Structural engineer based in the United States, currently delivering infrastructure work at INNOVA TECHNOLOGIES with a focus on BIM execution, QA/QC, and practical automation.",
       currentWork: "Current work",
       currentWorkSummary:
         "Designing cleaner structural workflows for large-scale infrastructure.",
       viewProjects: "View projects",
       startConversation: "Start a conversation",
+      profileEyebrow: "Now building",
+      imageBadge: "Monorail delivery / BIM systems / QA automation",
       stats: [
         {
+          label: "Role",
+          value: "Structural and BIM engineer at INNOVA TECHNOLOGIES.",
+        },
+        {
+          label: "Education",
+          value: "M.S. in Structural Engineering from UC San Diego.",
+        },
+        {
           label: "Focus",
-          value: "Monorail, buildings, and structural delivery systems.",
-        },
-        {
-          label: "Tools",
-          value: "Revit, Dynamo, Python, C#, Excel, and QA/QC workflows.",
-        },
-        {
-          label: "Approach",
-          value: "Clear engineering, repeatable processes, and better handoff quality.",
+          value: "Monorail systems, buildings, and repeatable delivery automation.",
         },
       ],
       selectedWork: "Selected work",
@@ -44,30 +46,125 @@ export const siteCopy = {
       seeAllProjects: "See all projects",
       openProject: "Open project",
       exploreDetails: "Explore details",
+      statusLabel: "Status",
+      highlightLabel: "Why it matters",
     },
     about: {
       title: "About Me",
-      intro: [
-        "I am a Structural Engineer working at INNOVA TECHNOLOGIES, focused on infrastructure and building structures.",
-        "Originally from Cusco, Peru, my career is driven by a dual passion: the physical integrity of large-scale structures and the digital systems that make their creation more efficient.",
-        "I earned my bachelor's degree in Civil Engineering from Universidad Nacional de San Antonio Abad del Cusco and completed my master's in Structural Engineering at the University of California, San Diego.",
-        "My work focuses on monorail and building structures, reinforced concrete and steel design, and BIM deliveries that support real-world constructability.",
-        "Beyond modeling, I build automation tools with Python, C#, Excel, and Dynamo to reduce repetitive work and improve QA/QC workflows.",
+      kicker: "Engineer / builder / systems thinker",
+      summary:
+        "I work at the intersection of structural engineering and delivery systems, building models, workflows, and tools that help teams issue cleaner structural packages.",
+      quickFacts: [
+        {
+          label: "Role",
+          value: "Structural and BIM Engineer at INNOVA TECHNOLOGIES",
+        },
+        {
+          label: "Based",
+          value: "Las Vegas, Nevada",
+        },
+        {
+          label: "Education",
+          value: "M.S. Structural Engineering, UC San Diego",
+        },
+      ],
+      storySections: [
+        {
+          title: "Where I started",
+          body: "I am from Cusco, Peru, and my path into engineering started with a fascination for how large structures carry load, shape cities, and serve people over time.",
+        },
+        {
+          title: "What I work on",
+          body: "My day-to-day work spans monorail and building structures, BIM coordination, reinforced concrete and steel design, and the quality systems required to keep deliverables consistent.",
+        },
+        {
+          title: "Why automation matters",
+          body: "I build tools in Python, C#, Dynamo, and Excel to cut repetitive work, strengthen QA/QC, and give engineering teams more time for decisions that actually need judgment.",
+        },
+        {
+          title: "How I like to work",
+          body: "I care about clarity, repeatability, and handoff quality. Good engineering is not only correct; it is understandable, coordinated, and ready for the next team.",
+        },
+      ],
+      timelineTitle: "Career path",
+      timeline: [
+        {
+          label: "Cusco, Peru",
+          title: "Civil engineering foundation",
+          detail:
+            "Built my grounding in civil engineering and developed an early interest in structural systems and real-world constructability.",
+        },
+        {
+          label: "UC San Diego",
+          title: "Advanced structural training",
+          detail:
+            "Completed my master's in Structural Engineering and strengthened my focus on analysis, design, and disciplined problem solving.",
+        },
+        {
+          label: "INNOVA",
+          title: "Infrastructure and BIM delivery",
+          detail:
+            "Work on infrastructure and building projects with an emphasis on monorail systems, BIM coordination, and dependable package delivery.",
+        },
+        {
+          label: "Today",
+          title: "Engineering plus automation",
+          detail:
+            "Design structural workflows and build practical tools that make QA/QC, modeling, and handoff processes cleaner and more repeatable.",
+        },
       ],
       technicalFocus: "Technical Focus",
-      technicalItems: [
-        "Transportation structures with an emphasis on monorail systems",
-        "Reinforced concrete and steel design",
-        "BIM coordination and digital delivery",
-        "Structural analysis with Sofistik, RISA, CSI, and IDEA StatiCa",
-        "Engineering automation with Python and C#",
-        "Custom Excel-based engineering tools",
+      technicalCards: [
+        {
+          title: "Transportation structures",
+          detail: "Monorail systems and infrastructure packages with coordination and delivery discipline built in.",
+        },
+        {
+          title: "Concrete and steel design",
+          detail: "Structural design work grounded in constructability, clarity, and practical engineering judgment.",
+        },
+        {
+          title: "BIM coordination",
+          detail: "Model quality, digital delivery standards, and better handoff quality across teams.",
+        },
+        {
+          title: "Structural analysis",
+          detail: "Workflow experience with Sofistik, RISA, CSI, and IDEA StatiCa across different project needs.",
+        },
+        {
+          title: "Automation tooling",
+          detail: "Python, C#, Dynamo, and Excel tools that remove repetitive work and improve consistency.",
+        },
+        {
+          title: "QA/QC systems",
+          detail: "Checks, templates, and repeatable review steps that make engineering output easier to trust.",
+        },
       ],
       philosophy: "Philosophy",
       philosophyLines: [
         "Engineering demands constant growth. I commit to learning, adapting, and improving.",
-        "Never stop learning, never stop improving.",
+        "The goal is not only to design well, but to build systems that help teams deliver well.",
       ],
+      principlesTitle: "Working style",
+      principles: [
+        {
+          title: "Clear thinking",
+          detail: "Break complex engineering work into decisions teams can understand and act on.",
+        },
+        {
+          title: "Repeatable systems",
+          detail: "Turn useful workflows into standards, templates, and checks that scale.",
+        },
+        {
+          title: "Practical tools",
+          detail: "Build automation that solves real bottlenecks instead of adding complexity.",
+        },
+      ],
+      ctaTitle: "Want to build cleaner structural workflows?",
+      ctaSummary:
+        "Explore projects, automation work, or reach out if you want to talk about BIM delivery, structural engineering, or practical tooling.",
+      ctaPrimary: "View projects",
+      ctaSecondary: "Contact Diego",
     },
     projects: {
       kicker: "Projects",
@@ -90,6 +187,8 @@ export const siteCopy = {
       summary:
         "An interactive career chatbot tool built with Python and Gradio, deployed on Hugging Face Spaces.",
       openFullScreen: "Open full screen",
+      builtWith: "Built with",
+      liveDemo: "Live demo",
     },
     contact: {
       title: "Contact",
@@ -100,6 +199,7 @@ export const siteCopy = {
         email: "Email",
         phone: "Phone",
         company: "Company",
+        location: "Location",
         linkedIn: "LinkedIn",
         github: "GitHub",
         name: "Name",
@@ -124,38 +224,40 @@ export const siteCopy = {
     brandRole: "Ingeniero estructural y BIM",
     nav: {
       home: "Inicio",
-      about: "Sobre mi",
+      about: "Sobre m\u00ed",
       projects: "Proyectos",
       ai: "IA",
       contact: "Contacto",
     },
     footer: {
       name: "Diego Nunez Mendoza",
-      role: "Ingeniero estructural y BIM • Automatizacion",
+      role: "Ingeniero estructural y BIM / Automatizaci\u00f3n",
       builtWith: "Hecho con Next.js",
     },
     home: {
-      kicker: "Ingenieria estructural • BIM • automatizacion",
-      title: "Diego Nunez diseña estructuras y los sistemas que las hacen posibles.",
+      kicker: "Ingenier\u00eda estructural / BIM / automatizaci\u00f3n",
+      title: "Diego Nunez dise\u00f1a estructuras y los sistemas que mejoran su entrega.",
       summary:
-        "Ubicado en Estados Unidos y trabajando actualmente en INNOVA TECHNOLOGIES, con enfoque en infraestructura, entregables BIM y automatizacion aplicada a ingenieria.",
+        "Ingeniero estructural ubicado en Estados Unidos y trabajando actualmente en INNOVA TECHNOLOGIES, con enfoque en infraestructura, ejecuci\u00f3n BIM, QA/QC y automatizaci\u00f3n aplicada a ingenier\u00eda.",
       currentWork: "Trabajo actual",
       currentWorkSummary:
-        "Creando flujos de trabajo estructurales mas limpios para infraestructura de gran escala.",
+        "Creando flujos estructurales mas limpios para infraestructura de gran escala.",
       viewProjects: "Ver proyectos",
-      startConversation: "Iniciar conversacion",
+      startConversation: "Iniciar conversaci\u00f3n",
+      profileEyebrow: "Actualmente desarrollando",
+      imageBadge: "Entregables de monorriel / sistemas BIM / automatizaci\u00f3n QA",
       stats: [
         {
+          label: "Rol",
+          value: "Ingeniero estructural y BIM en INNOVA TECHNOLOGIES.",
+        },
+        {
+          label: "Formaci\u00f3n",
+          value: "Maestr\u00eda en Ingenier\u00eda Estructural en UC San Diego.",
+        },
+        {
           label: "Enfoque",
-          value: "Monorriel, edificios y sistemas de entrega estructural.",
-        },
-        {
-          label: "Herramientas",
-          value: "Revit, Dynamo, Python, C#, Excel y flujos QA/QC.",
-        },
-        {
-          label: "Metodo",
-          value: "Ingenieria clara, procesos repetibles y mejor calidad de entrega.",
+          value: "Monorriel, edificios y automatizaci\u00f3n para entregables repetibles.",
         },
       ],
       selectedWork: "Trabajo seleccionado",
@@ -163,52 +265,149 @@ export const siteCopy = {
       seeAllProjects: "Ver todos los proyectos",
       openProject: "Abrir proyecto",
       exploreDetails: "Ver detalles",
+      statusLabel: "Estado",
+      highlightLabel: "Valor principal",
     },
     about: {
-      title: "Sobre mi",
-      intro: [
-        "Soy ingeniero estructural y trabajo en INNOVA TECHNOLOGIES, enfocado en infraestructura y estructuras de edificaciones.",
-        "Soy de Cusco, Peru, y mi carrera esta guiada por una doble pasion: la integridad fisica de grandes estructuras y los sistemas digitales que hacen mas eficiente su desarrollo.",
-        "Obtuve mi bachillerato en Ingenieria Civil en la Universidad Nacional de San Antonio Abad del Cusco y complete mi maestria en Ingenieria Estructural en la University of California, San Diego.",
-        "Mi trabajo se enfoca en estructuras de monorriel y edificaciones, diseño en concreto armado y acero, y entregables BIM que apoyan la constructibilidad real.",
-        "Ademas del modelado, desarrollo herramientas de automatizacion con Python, C#, Excel y Dynamo para reducir trabajo repetitivo y mejorar procesos de QA/QC.",
+      title: "Sobre m\u00ed",
+      kicker: "Ingeniero / constructor / pensador de sistemas",
+      summary:
+        "Trabajo en la intersecci\u00f3n entre ingenier\u00eda estructural y sistemas de entrega, desarrollando modelos, flujos de trabajo y herramientas que ayudan a emitir paquetes estructurales m\u00e1s limpios.",
+      quickFacts: [
+        {
+          label: "Rol",
+          value: "Ingeniero estructural y BIM en INNOVA TECHNOLOGIES",
+        },
+        {
+          label: "Base",
+          value: "Las Vegas, Nevada",
+        },
+        {
+          label: "Formaci\u00f3n",
+          value: "Maestr\u00eda en Ingenier\u00eda Estructural, UC San Diego",
+        },
       ],
-      technicalFocus: "Enfoque tecnico",
-      technicalItems: [
-        "Estructuras de transporte con enfasis en sistemas de monorriel",
-        "Diseño en concreto armado y acero",
-        "Coordinacion BIM y entrega digital",
-        "Analisis estructural con Sofistik, RISA, CSI e IDEA StatiCa",
-        "Automatizacion de ingenieria con Python y C#",
-        "Herramientas de ingenieria personalizadas en Excel",
+      storySections: [
+        {
+          title: "Donde empece",
+          body: "Soy de Cusco, Per\u00fa, y mi camino en la ingenier\u00eda comenz\u00f3 con una fascinaci\u00f3n por la forma en que las grandes estructuras resisten cargas, transforman ciudades y sirven a las personas con el tiempo.",
+        },
+        {
+          title: "En que trabajo",
+          body: "Mi trabajo diario abarca estructuras de monorriel y edificaciones, coordinaci\u00f3n BIM, dise\u00f1o en concreto armado y acero, y los sistemas de calidad necesarios para mantener entregables consistentes.",
+        },
+        {
+          title: "Por que importa la automatizacion",
+          body: "Desarrollo herramientas en Python, C#, Dynamo y Excel para reducir trabajo repetitivo, fortalecer QA/QC y dar mas tiempo al equipo para decisiones que realmente requieren criterio.",
+        },
+        {
+          title: "Como me gusta trabajar",
+          body: "Valoro la claridad, la repetibilidad y la calidad de entrega. La buena ingenier\u00eda no solo es correcta; tambi\u00e9n debe ser entendible, coordinada y lista para el siguiente equipo.",
+        },
       ],
-      philosophy: "Filosofia",
+      timelineTitle: "Trayectoria",
+      timeline: [
+        {
+          label: "Cusco, Per\u00fa",
+          title: "Base en ingenier\u00eda civil",
+          detail:
+            "Constru\u00ed mi base en ingenier\u00eda civil y desarroll\u00e9 un inter\u00e9s temprano por los sistemas estructurales y la constructibilidad real.",
+        },
+        {
+          label: "UC San Diego",
+          title: "Formacion estructural avanzada",
+          detail:
+            "Complet\u00e9 mi maestr\u00eda en Ingenier\u00eda Estructural y reforc\u00e9 mi enfoque en an\u00e1lisis, dise\u00f1o y resoluci\u00f3n disciplinada de problemas.",
+        },
+        {
+          label: "INNOVA",
+          title: "Infraestructura y entregables BIM",
+          detail:
+            "Trabajo en proyectos de infraestructura y edificaciones con \u00e9nfasis en sistemas de monorriel, coordinaci\u00f3n BIM y entregables confiables.",
+        },
+        {
+          label: "Hoy",
+          title: "Ingenieria mas automatizacion",
+          detail:
+            "Dise\u00f1o flujos de trabajo estructurales y desarrollo herramientas pr\u00e1cticas para hacer m\u00e1s limpios y repetibles los procesos de QA/QC, modelado y entrega.",
+        },
+      ],
+      technicalFocus: "Enfoque t\u00e9cnico",
+      technicalCards: [
+        {
+          title: "Estructuras de transporte",
+          detail: "Sistemas de monorriel y paquetes de infraestructura con coordinacion y disciplina de entrega.",
+        },
+        {
+          title: "Diseno en concreto y acero",
+          detail: "Trabajo estructural con enfoque en constructibilidad, claridad y criterio de ingenieria.",
+        },
+        {
+          title: "Coordinacion BIM",
+          detail: "Calidad del modelo, estandares de entrega digital y mejor calidad de traspaso entre equipos.",
+        },
+        {
+          title: "Analisis estructural",
+          detail: "Experiencia de flujo de trabajo con Sofistik, RISA, CSI e IDEA StatiCa para distintas necesidades de proyecto.",
+        },
+        {
+          title: "Herramientas de automatizacion",
+          detail: "Python, C#, Dynamo y Excel para eliminar trabajo repetitivo y mejorar consistencia.",
+        },
+        {
+          title: "Sistemas QA/QC",
+          detail: "Revisiones, plantillas y pasos repetibles que hacen mas confiable el resultado de ingenieria.",
+        },
+      ],
+      philosophy: "Filosof\u00eda",
       philosophyLines: [
-        "La ingenieria exige crecimiento constante. Me comprometo a aprender, adaptarme y mejorar.",
-        "Nunca dejar de aprender, nunca dejar de mejorar.",
+        "La ingenier\u00eda exige crecimiento constante. Me comprometo a aprender, adaptarme y mejorar.",
+        "El objetivo no es solo dise\u00f1ar bien, sino construir sistemas que ayuden a los equipos a entregar mejor.",
       ],
+      principlesTitle: "Forma de trabajo",
+      principles: [
+        {
+          title: "Pensamiento claro",
+          detail: "Convertir trabajo complejo de ingenieria en decisiones que los equipos puedan entender y ejecutar.",
+        },
+        {
+          title: "Sistemas repetibles",
+          detail: "Transformar flujos utiles en estandares, plantillas y revisiones que puedan escalar.",
+        },
+        {
+          title: "Herramientas practicas",
+          detail: "Desarrollar automatizacion que resuelva cuellos de botella reales sin agregar complejidad.",
+        },
+      ],
+      ctaTitle: "Quieres construir flujos estructurales mas limpios?",
+      ctaSummary:
+        "Explora proyectos, trabajo de automatizacion o escribeme si quieres hablar sobre entregables BIM, ingenieria estructural o herramientas practicas.",
+      ctaPrimary: "Ver proyectos",
+      ctaSecondary: "Contactar a Diego",
     },
     projects: {
       kicker: "Proyectos",
-      title: "Una coleccion de proyectos que puedes actualizar desde un solo archivo.",
+      title: "Una colecci\u00f3n de proyectos que puedes actualizar desde un solo archivo.",
       intro:
         "Tus proyectos viven en app/projects/projects-data.ts. Para agregar uno nuevo, duplica un objeto de la lista y actualiza el texto, el ano, las herramientas y el enlace opcional.",
-      guideTitle: "Guia rapida",
+      guideTitle: "Guia r\u00e1pida",
       guideSteps: [
         "Abre el archivo de datos de proyectos.",
         "Actualiza un objeto existente o pega uno nuevo.",
-        "Guarda el archivo y el sitio se actualizara automaticamente.",
+        "Guarda el archivo y el sitio se actualizara autom\u00e1ticamente.",
       ],
       guideNote:
-        "Campos opcionales como link y featured tambien controlan las tarjetas del inicio.",
+        "Campos opcionales como link y featured tambi\u00e9n controlan las tarjetas del inicio.",
       highlights: "Puntos clave",
       visitProject: "Visitar proyecto",
     },
     ai: {
-      title: "Conversacion de Carrera con IA",
+      title: "Conversaci\u00f3n de Carrera con IA",
       summary:
-        "Una herramienta interactiva de conversacion profesional construida con Python y Gradio, desplegada en Hugging Face Spaces.",
+        "Una herramienta interactiva de conversaci\u00f3n profesional construida con Python y Gradio, desplegada en Hugging Face Spaces.",
       openFullScreen: "Abrir en pantalla completa",
+      builtWith: "Construido con",
+      liveDemo: "Demo en vivo",
     },
     contact: {
       title: "Contacto",
@@ -217,8 +416,9 @@ export const siteCopy = {
         "Prefieres correo? Usa el formulario o escribeme directamente. Leo todo lo que no es spam.",
       labels: {
         email: "Correo",
-        phone: "Telefono",
+        phone: "Tel\u00e9fono",
         company: "Empresa",
+        location: "Ubicaci\u00f3n",
         linkedIn: "LinkedIn",
         github: "GitHub",
         name: "Nombre",
