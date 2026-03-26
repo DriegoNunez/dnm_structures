@@ -168,17 +168,21 @@ export const siteCopy = {
     },
     projects: {
       kicker: "Projects",
-      title: "A project collection you can update from one file.",
+      title: "Selected engineering, BIM, and automation work.",
       intro:
-        "Your projects live in app/projects/projects-data.ts. To add a new project, duplicate one object in that list and update the text, year, tools, and optional link.",
-      guideTitle: "Quick edit guide",
-      guideSteps: [
-        "Open the project data file.",
-        "Update an existing object or paste a new one.",
-        "Save the file and the site updates automatically.",
+        "A growing portfolio of structural delivery systems, automation tools, and practical digital products built around real project needs.",
+      overviewTitle: "What this page shows",
+      overviewPoints: [
+        "Infrastructure and BIM work shaped by coordination, QA/QC, and delivery quality.",
+        "Automation tools designed to remove repetitive work and improve engineering consistency.",
+        "Experiments and products that connect engineering thinking with practical software.",
       ],
-      guideNote:
-        "Optional fields like link and featured also control the homepage cards.",
+      stats: {
+        projects: "Projects",
+        active: "Active / live",
+        areas: "Focus areas",
+      },
+      collectionTitle: "Project collection",
       highlights: "Highlights",
       visitProject: "Visit project",
     },
@@ -387,17 +391,21 @@ export const siteCopy = {
     },
     projects: {
       kicker: "Proyectos",
-      title: "Una colecci\u00f3n de proyectos que puedes actualizar desde un solo archivo.",
+      title: "Trabajo seleccionado en ingenieria, BIM y automatizacion.",
       intro:
-        "Tus proyectos viven en app/projects/projects-data.ts. Para agregar uno nuevo, duplica un objeto de la lista y actualiza el texto, el ano, las herramientas y el enlace opcional.",
-      guideTitle: "Guia r\u00e1pida",
-      guideSteps: [
-        "Abre el archivo de datos de proyectos.",
-        "Actualiza un objeto existente o pega uno nuevo.",
-        "Guarda el archivo y el sitio se actualizara autom\u00e1ticamente.",
+        "Un portafolio en crecimiento de sistemas de entrega estructural, herramientas de automatizacion y productos digitales practicos construidos alrededor de necesidades reales de proyecto.",
+      overviewTitle: "Lo que muestra esta pagina",
+      overviewPoints: [
+        "Trabajo de infraestructura y BIM guiado por coordinacion, QA/QC y calidad de entrega.",
+        "Herramientas de automatizacion dise\u00f1adas para reducir trabajo repetitivo y mejorar consistencia en ingenieria.",
+        "Experimentos y productos que conectan pensamiento de ingenieria con software practico.",
       ],
-      guideNote:
-        "Campos opcionales como link y featured tambi\u00e9n controlan las tarjetas del inicio.",
+      stats: {
+        projects: "Proyectos",
+        active: "Activos / en linea",
+        areas: "Areas de enfoque",
+      },
+      collectionTitle: "Coleccion de proyectos",
       highlights: "Puntos clave",
       visitProject: "Visitar proyecto",
     },
